@@ -1,0 +1,19 @@
+{
+  "email": {
+    "provider": "resend",
+    "apiKey": "re_xxxxxxxxxxxx",
+    "fromEmail": "outreach@yourdomain.com",
+    "fromName": "Ayoub K"
+  },
+  "leads": {
+    "provider": "apollo",
+    "apiKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "voice": {
+    "provider": "bland",
+    "apiKey": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  },
+  "domain": {
+    "whoisApiKey": "your-whois-api-key"
+  }
+}

@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "demo": "ts-node demo.ts",
+    "integration": "ts-node integration-demo.ts",
     "build": "tsc"
   },
   "devDependencies": {
