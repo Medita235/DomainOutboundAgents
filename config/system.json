@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "name": "domain-sales-outbound-infrastructure",
+  "description": "AI-powered outbound email infrastructure for domain name sales",
+  "settings": {
+    "minEmailAccounts": 10,
+    "warmingDays": 30,
+    "dailyEmailLimit": 50,
+    "maxBounceRate": 2,
+    "followUpDelay": 3,
+    "maxFollowUps": 4,
+    "spinTaxVariations": 5
+  },
+  "namingConventions": {
+    "professional": {
+      "format": "firstname.lastname@domain.com",
+      "examples": ["ayoub.kehel@proton.me", "kehel.ayoub@gmail.com", "mr.ayoubkehel@gmail.com"]
+    },
+    "avoid": ["user9988@gmail.com", "ayoub123@gmail.com", "ayoub.k.10@gmail.com"]
+  },
+  "providers": {
+    "registrar": "porkbun",
+    "emailVerification": "emaillistverify.com",
+    "leadsourcing": ["apollo.io", "linkedin", "googlemaps"],
+    "marketplace": ["afternic", "godaddy"],
+    "voiceAI": ["bland.ai", "vapi.ai", "ajelix"]
+  },
+  "authentication": {
+    "spf": "v=spf1 include:_spf.proton.me ~all",
+    "dkim": "selector._domainkey.proton.me",
+    "dmarc": "v=DMARC1; p=quarantine; rua=mailto:dmarc@domain.com"
+  },
+  "senderReputation": {
+    "excellent": 95,
+    "good": 85,
+    "fair": 70,
+    "poor": 50,
+    "critical": 30
+  }
+}
