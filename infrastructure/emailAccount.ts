@@ -22,6 +22,7 @@ interface WarmingTask {
 
 interface WarmingProtocol {
   day: number;
+  dayEnd?: number;
   actions: string[];
   maxEmails: number;
 }
@@ -32,9 +33,9 @@ const WARMING_PROTOCOL: WarmingProtocol[] = [
   { day: 3, actions: ['Reply to newsletter emails', 'Send 10-15 emails'], maxEmails: 15 },
   { day: 4, actions: ['Increase to 15-20 emails', 'Engage in threads'], maxEmails: 20 },
   { day: 5, actions: ['Maintain 20-30 emails', 'Start light outreach'], maxEmails: 30 },
-  { day: 6-14, actions: ['Gradual increase to 50/day'], maxEmails: 50 },
-  { day: 15-30, actions: ['Scale to 100/day'], maxEmails: 100 },
-  { day: 30+, actions: ['Full production mode'], maxEmails: 150 }
+  { day: 6, dayEnd: 14, actions: ['Gradual increase to 50/day'], maxEmails: 50 },
+  { day: 15, dayEnd: 30, actions: ['Scale to 100/day'], maxEmails: 100 },
+  { day: 31, dayEnd: 999, actions: ['Full production mode'], maxEmails: 150 }
 ];
 
 export class EmailAccountManager extends BaseAgent {

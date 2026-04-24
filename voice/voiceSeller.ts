@@ -38,7 +38,7 @@ interface ScriptStep {
 
 export class VoiceSellerAgent extends BaseAgent {
   private sessions: Map<string, CallSession> = new Map();
-  private config: VoiceConfig = {
+  private voiceConfig: VoiceConfig = {
     provider: 'bland.ai',
     voiceId: 'default',
     language: 'en-US',
@@ -153,12 +153,12 @@ I wanted to touch base briefly. Give me a call back at your convenience. Thanks.
     }
   }
 
-  async getConfig(): Promise<VoiceConfig> {
-    return this.config;
+  async getVoiceConfig(): Promise<VoiceConfig> {
+    return this.voiceConfig;
   }
 
   async updateConfig(config: Partial<VoiceConfig>): Promise<void> {
-    this.config = { ...this.config, ...config };
+    this.voiceConfig = { ...this.voiceConfig, ...config };
   }
 
   async getSession(sessionId: string): Promise<CallSession | null> {

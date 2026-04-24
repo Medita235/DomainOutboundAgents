@@ -168,7 +168,7 @@ class DomainSalesDemo {
 
   private async step6_simulateReply() {
     console.log('💬 STEP 6: Processing Reply');
-    console.log───────────────────────────────────────────────────────────');
+    console.log('───────────────────────────────────────────────────────────');
 
     const reply = await responseHandlerAgent.processReply(
       'campaign-123',
@@ -216,7 +216,7 @@ class DomainSalesDemo {
     console.log('📞 STEP 8: Voice Seller Agent');
     console.log('───────────────────────────────────────────────────────────');
 
-    const config = await voiceSellerAgent.getConfig();
+    const config = await voiceSellerAgent.getVoiceConfig();
     console.log(`   🔧 Voice config:`);
     console.log(`   - Provider: ${config.provider}`);
     console.log(`   - Language: ${config.language}`);
